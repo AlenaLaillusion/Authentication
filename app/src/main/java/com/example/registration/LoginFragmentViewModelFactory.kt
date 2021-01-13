@@ -14,7 +14,6 @@ class LoginFragmentViewModelFactory(
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T = when (modelClass) {
         LoginFragmentViewModel::class.java -> LoginFragmentViewModel(
-            context = context,
             dispatcher = dispatcher
         )
         else -> throw IllegalArgumentException("$modelClass is not registered ViewModel")
